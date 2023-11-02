@@ -12,6 +12,8 @@ router.on({
     "/new/:id": (id) => {
         const { data } = id;
         display(Infopage(data));
+
+        //đang lỗi k nhận css và navigo khong loading
     },
     "/About": () => display(Aboutpage()),
     "/admin/doash": () => display(Dashboad()),
