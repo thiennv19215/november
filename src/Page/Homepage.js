@@ -22,7 +22,7 @@ export default async function Homepage() {
               <img src= ${item.avatar} />
           </a>
           <h3 class="text-2xl">${item.name}</h3
-          <span ><a class = "text-2xl text-fuchsia-800" href ="/new/${item.id}">${item.title}</a></span>
+          <span ><a class = "text-2xl text-fuchsia-800" href="/new/${item.id}">${item.title}</a></span>
           </div>
 
     `,
