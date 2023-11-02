@@ -10,6 +10,6 @@ const data = [
     { id: 9, title: "bài viết số 9", img: "https://picsum.photos/250/250" },
     { id: 10, title: "bài viết số 10", img: "https://picsum.photos/250/250" },
     { id: 11, title: "bài viết số 11", img: "https://picsum.photos/250/250" },
+    { id: 12, title: "bài viết số 11", img: "https://picsum.photos/250/250" },
 ];
 export { data };
-

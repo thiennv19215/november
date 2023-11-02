@@ -1,2 +1,2 @@
-const Aboutpage = ()=> `<h1>aboutpage</h1>`
-export default Aboutpage
+const Aboutpage = () => `<h1>aboutpage</h1>`;
+export default Aboutpage;

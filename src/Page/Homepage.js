@@ -1,6 +1,8 @@
-import { data } from "../api/Api";
+import axios from "axios";
 
-export default function Homepage() {
+export default async function Homepage() {
+    const { data } = await axios.get("https://654347ec01b5e279de201e8f.mockapi.io/ask/users");
+
     return (
     /* html */
         `<div class ="max-w-5xl mx-auto">
@@ -14,10 +16,10 @@ export default function Homepage() {
             .map(
                 (item) => `  <div class = "border py-4 ">
           <a class="flex justify-center" href = "/">
-              <img  src= ${item.img} />
+              <img src= ${item.avatar} />
           </a>
-          <h3 class="text-2xl">tiêu đề ${item.id}</h3>
-          <span><a href = "/new/${item.id}">${item.title}</a></span>
+          <h3 class="text-2xl">${item.name}</h3>
+          <span><a href ="/new/${item.id}">${item.title}</a></span>
           </div>
 
     `,

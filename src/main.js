@@ -4,7 +4,7 @@ import Homepage from "./Page/Homepage";
 import display from "./reuniliti/Index";
 import Infopage from "./Page/Infopage";
 
-const router = new Navigo("/", { linksSelector: "a", hash: true });
+const router = new Navigo("/", { linksSelector: "a" });
 
 router.on({
     "/": () => display(Homepage()),

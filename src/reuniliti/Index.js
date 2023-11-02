@@ -3,9 +3,9 @@ import { Header } from "../component/Header";
 
 const app = document.querySelector("#app");
 
-const display = (fn) => {
+const display = async (fn) => {
     document.querySelector("#header").innerHTML = Header();
-    app.innerHTML = fn;
+    app.innerHTML = await fn;
     document.querySelector("#footer").innerHTML = Footer();
 };
 export default display;
