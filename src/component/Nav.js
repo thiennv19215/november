@@ -6,7 +6,7 @@ export const Nav = () => (
             </a>
             <a class = "block py-3 text-white p-4 hover:bg-orange-600" href ="/About"><li>Aboutpage</li></a>
             <a class = "block py-3 text-white p-4 hover:bg-orange-600" href ="/Product"> <li>Product</li></a>
-            <a class = "block py-3 text-white p-4 hover:bg-orange-600" href ="/admin"><li>admin</li></a>
+            <a class = "block py-3 text-white p-4 hover:bg-orange-600" href ="/admin/doash"><li>admin</li></a>
         </ul>
     </div>`
 );
