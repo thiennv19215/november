@@ -1,11 +1,14 @@
 import axios from "axios";
 
 export default async function Homepage() {
-    const { data } = await axios.get("https://654347ec01b5e279de201e8f.mockapi.io/ask/users");
-
-    return (
-    /* html */
-        `<div class ="max-w-5xl mx-auto">
+    try {
+        const loadingElement = document.getElementById("loading");
+        loadingElement.style.display = "block";
+        const { data } = await axios.get("https://654347ec01b5e279de201e8f.mockapi.io/ask/users");
+        loadingElement.style.display = "none";
+        return (
+        /* html */
+            `<div class ="max-w-5xl mx-auto">
     <div class = "banner">
         <img src = "https://picsum.photos/1200/250"/></div>
     <div class = "news">
@@ -13,8 +16,8 @@ export default async function Homepage() {
 
         <div class = "grid grid-cols-3 gap-4 text-center rounded-s-none">
           ${data
-            .map(
-                (item) => `  <div class = "border py-4 ">
+                .map(
+                    (item) => `  <div class = "border py-4 ">
           <a class="flex justify-center" href = "/">
               <img src= ${item.avatar} />
           </a>
@@ -23,10 +26,13 @@ export default async function Homepage() {
           </div>
 
     `,
-            )
-            .join("")}
+                )
+                .join("")}
         </div>
     </div>
     </div>`
-    );
+        );
+    } catch (error) {
+        console.log(error, "lỗi rồi");
+    }
 }
